@@ -1,0 +1,505 @@
+.user-page-main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: blueviolet;
+}
+
+/*------- left side users list ---------*/
+.users-list {
+    width: 25%;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #000000;
+}
+
+.users-list-loader-container {
+    margin-top: calc(50vh - 40px);
+    margin-left: calc(50% - 40px);
+}
+
+/*------- current logged user list tile --------*/
+.current-user-list-tile {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    background-color: #1d1d1d;
+    color: #FFFFFF;
+    border-bottom: 1px solid #000000;
+}
+
+/*------- current user list tile profile picture -------*/
+.current-user-list-tile-profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #696969;
+    border-radius: 50%;
+}
+
+/*------- current user list username ------- */
+.current-user-list-tile-username {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+/*------------- user logout button -------- */
+.logout-button-div {
+    flex-grow: 1;
+    margin: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logout-button-div img {
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+
+/*------ list tile --------*/
+.list-tile {
+    position: relative;
+    width: calc(100% - 40px);
+    margin: 5px 10px 0 10px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.list-tile:hover {
+    background-color: #343434;
+}
+
+/*-------  list tile profile picture -------*/
+.list-tile-profile-pic {
+    width: 40px;
+    height: 40px;
+    background-color: #6b6b6b;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00000000;
+}
+
+/*------ online indication green circle -------*/
+.list-tile-online-status {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    background-color: #00FF00;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/*------- list tile moddle container-----*/
+.list-tile-middle-div {
+    margin-left: 10px;
+    flex-grow: 1;
+    overflow: hidden;
+    width: calc(100% - 100px);
+}
+
+/*-------- list tile username ------*/
+.list-tile-username {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*------- list tile last message ------*/
+.list-tile-last-message {
+    color: aliceblue;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.last-message-time-and-unread-message-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/*------- list tile notification of unread message ------*/
+.list-tile-unread-message {
+    background-color: #00FF00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/*-------- time of last message ------*/
+.last-message-time {
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 500;
+    padding-bottom: 3px;
+}
+
+/*----- default welcome div ----------*/
+.welcome-div {
+    height: 100vh;
+    width: 75%;
+    background-color: #474747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-div img {
+    height: 200px;
+    width: 200px;
+}
+
+/*----------right side chat area --------*/
+.chat-area {
+    width: 75%;
+    background-color: violet;
+    display: flex;
+    flex-direction: column;
+}
+
+/*------ chat area top bar ------------*/
+.top-bar {
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+}
+
+/*------------- user profile pic ---------*/
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000055;
+}
+
+/*------ top bar username -----*/
+.top-bar-username {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*------------ online offline status -------*/
+.top-bar-user-status {
+    color: #dfdcdc;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2px;
+}
+
+/*-------- search in conversation ------------*/
+.message-search-field-div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message-search-field {
+    width: 200px;
+    padding: 9px 12px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #3f3f3f;
+    color: #ffffff;
+    border: none;
+}
+
+.message-search-field:focus {
+    outline: none;
+}
+
+/*--------- messages area ---------*/
+.messages-area {
+    flex-grow: 1;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+    z-index: 1;
+}
+
+/*------- scroll bar for message area----*/
+.messages-area::-webkit-scrollbar {
+    width: 2px;
+    background-color: #000000;
+}
+.messages-area::-webkit-scrollbar-track {
+    width: 2px;
+    background-color: #FFFFFF00;
+}
+.messages-area::-webkit-scrollbar-thumb {
+    width: 2px;
+    background-color: #ffffff
+}
+
+/*------ user message tile---------*/
+.user-message-tile {
+    position: relative;
+    align-self: flex-end;
+    max-width: calc(100% - 50px);
+    padding: 5px;
+    margin: 10px;
+    background-color: #025c4c;
+    border-radius: 10px;
+}
+
+/*------ message delete button ------*/
+.user-message-tile-delete-button {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    padding: 5px;
+    top: 6px;
+    left: 0px;
+    z-index: -1;
+    transition: left 0.2s linear;
+}
+
+.user-message-tile:hover .user-message-tile-delete-button {
+    height: 22px;
+    width: 22px;
+    left: -30px;
+}
+
+/*------ reciepient message tile---------*/
+.reciepient-message-tile {
+    align-self: flex-start;
+    max-width: calc(100% - 100px);
+    padding: 5px;
+    margin: 10px;
+    background-color: #3f3f3f;
+    border-radius: 10px;
+}
+
+/*------- message content ------*/
+.message-content {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2px 75px 5px 2px;
+}
+
+.message-tile-bottom-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.message-time {
+    color: #acacac;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/*------- check box -----------*/
+.mark-as-read-receiver {
+    width: 13px;
+    height: 13px;
+    background-color: #000000;
+    margin-left: 4px;
+}
+
+/*------ blue/grey tick mark ---------*/
+.mark-as-read-sender {
+    width: 15px;
+    height: 8px;
+    margin-left: 4px;
+}
+
+/*-------- bottom bar --------*/
+.bottom-bar {
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #000000;
+}
+
+/*------- bottom bar text box ------*/
+.bottom-bar input {
+    caret-color: #ffffff;
+    color: #ffffff;
+    flex-grow: 1;
+    margin: 5px 5px;
+    border-radius: 10px;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    background-color: #272727;
+}
+
+.bottom-bar input:focus {
+    outline: none;
+}
+
+/*------ bottom bar send button ----- */
+.bottom-bar button {
+    margin: 5px 7px;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background: none;
+    background-color: #3f3f3f;
+}
+
+.bottom-bar button img {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s linear;
+}
+
+.bottom-bar button.disabled img {
+    cursor: not-allowed;
+    transform: rotate(90deg);
+}
+
+/*------- Toast -------*/
+/* .popup-toast-off {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 60px);
+    width: 150px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: transparent;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s linear;
+    z-index: 999;
+}
+
+.popup-on {
+    bottom: 80px;
+    background-color: black;
+    color: #FFFFFF;
+} */
+
+
+
+
+
+
+/*--------- profile view overlay---------*/
+.user-profile-view-overlay {
+    position: absolute;
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000009c;
+    z-index: 999;
+}
+
+/*------ container to view user DP... with file choose vutton -----*/
+.user-profile-view-panel {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 4px 0px #000000, -3px -3px 4px -3px #B2C2CB;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #40434e;
+}
+
+/*-------- view panel close button (X) ------- */
+.user-profile-view-panel-close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* user dp in panel ------*/
+.user-profile-view-panel-user-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5c5c5c;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.choose-file-button {
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 5px 10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.selected-file-name {
+    color: #0ED2F6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 20px;
+}
+
+/*------------- dp update button --------*/
+.selected-file-upload-button {
+    color: #ff8800;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    box-shadow: 3px 3px 4px 0px #000000, -3px -3px 4px -3px #B2C2CB;
+    background-color: #40434e;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*----- container with selected file name , update button --------*/
+.upload-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
