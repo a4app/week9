@@ -63,6 +63,16 @@ const initializeWebSocket = (server) => {
 			})
 		})
 
+		socket.on('changeMessageStatusAll', ({chatId, receiver, sender}) => {
+			console.log(chatId, receiver, sender);
+			methods.updateAllStatusRead(chatId, receiver).then((res) => {
+				io.to(connectedUsers.get(receiver)).emit('updateMessageStatusAll', ({chatId, receiver})) // to destination of message
+				io.to(connectedUsers.get(sender)).emit('updateMessageStatusAll', ({chatId, receiver})) // to source of message
+			}).catch((err) => {
+				console.log('Failedd');
+			})
+		})
+
 		// delete a message
 		socket.on('deleteMessage', ({id, sender, receiver}) => {
 			methods.deleteMessage(id).then(() => {

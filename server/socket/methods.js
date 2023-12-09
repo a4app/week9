@@ -53,6 +53,19 @@ const methods = {
         })
     },
 
+    updateAllStatusRead: (chatID, receiver) => {
+        return new Promise( async (resolve, reject) => {
+            try {
+                const result = await MessageModel.updateMany({ chatID, receiver }, { $set: { receiverStatus: 'read' } });
+                return result ? resolve(true) : reject(false);
+            }
+            catch(err) {
+                console.log(err);
+                reject(false)
+            }
+        })
+    },
+
     // set user status .. last seen ( userID )
     updateLastSeen: (id) => {
         return new Promise( async (resolve, reject) => {
